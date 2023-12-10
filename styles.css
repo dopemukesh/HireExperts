@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+    line-height: inherit;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: none;
+}
+
+
+:root {
+    --primary-light: #fff;
+    --primary-dark: #3C4852;
+    --secondary-dark: #78829A;
+
+
+    --brand-primary: #2D81F7;  /* it can be used for text highlighting and etc. */
+    --brand-secondary: #08BD80;  /* it can be used for call to action buttons */
+    --brand-lightBlue: #F1F7FF;
+    --brand-lightGreen: #ECFFF7;
+
+    --full-size: 1440px;
+    --tab-size: 768px;
+
+    --auto-margin-t-b: auto 0; 
+    --auto-margin-l-r: 0 auto; 
+}
+
+
+body{
+    background-color: var(--primary-light);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.header{
+    width: 100%;
+    height: 4rem;
+    /* background: var(--brand-primary); */
+}
+
+.nav{
+    padding: 0 1rem;
+    margin: var(--auto-margin-l-r);
+    max-width: var(--full-size);
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.logobox{
+    margin: var(--auto-margin-t-b);
+    display: flex;
+}
+
+.logobox a{
+    display: flex;
+}
+
+
+.nav-links{
+    margin: var(--auto-margin-t-b);
+    display: flex;
+    gap: 0 2rem;
+    font-weight: 500;
+}
+
+.nav-links a{
+    color: var(--primary-dark);
+    cursor: pointer;
+}
+.nav-links a:hover{
+    border-bottom: 2px solid var(--brand-primary);
+    color: var(--brand-primary);
+}
+.nav-links a:focus{
+    border-bottom: 2px solid var(--brand-primary);
+    color: var(--brand-primary);
+}
+
+
+.action-btn{
+    display: flex;
+    margin: var(--auto-margin-t-b);
+    gap: 0 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.action-btn .login{
+    padding: 4px 1.5rem;
+    border: 1px solid var(--brand-primary);
+    border-radius: .5rem;
+    color: var(--primary-dark);
+    background: var(--brand-lightBlue);
+}
+
+.action-btn .signUp{
+    color: var(--primary-light);
+    background: var(--brand-primary);
+    padding: 4px 16px;
+    border-radius: .4rem;
+}
+
+
+.nav i{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+
+@media only screen and (max-device-width: 425px) and (orientation: portrait) {
+    .header{
+        height: 3rem;
+    }
+    .nav{
+        padding: 0 .5rem;
+    }
+    .logobox img{
+        width: 6rem;
+    }
+    .nav-links{
+        display: none;
+    }
+    .action-btn{
+        display: none;
+    }
+    .nav i{
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        margin: var(--auto-margin-t-b);
+    }
+}
+
+
+@media screen and (max-device-width: 768px) {
+    .nav-links{
+        display: none;
+    }
+    .action-btn{
+        display: none;
+    }
+    .nav i{
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        margin: var(--auto-margin-t-b);
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
