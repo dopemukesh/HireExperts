@@ -133,35 +133,43 @@ body{
 
 .teams-member{
     padding: 3rem 1rem;
-    display: flex;
-    margin: var(--auto-margin-l-r);
     max-width: var(--full-size);
-    height: 100%;
-    gap: 0 3rem;
+    /* display: flex; */
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(8, 2fr);
+    margin: var(--auto-margin-l-r);
+    overflow: auto;
+    gap: 2rem;
     /* background: #2D81F7; */
 }
 
 .card{
-    display: flex;
-    margin: var(--auto-margin-t-b);
-    height: 22rem;
+    /* margin: var(--auto-margin-t-b); */
     width: 19rem;
-    background: var(--primary-light);
+    height: 22rem;
+    display: flex;
     border-radius: 1rem;
-    overflow: hidden;
+    background: var(--primary-light);
     flex-direction: column;
+    justify-content: space-between;
     color: var(--primary-dark);
-    filter: drop-shadow(0px 0px 1rem #2d81f740);
+    filter: drop-shadow(0px 0px 2rem #3a8cff30);
+    
 }
 
 .card .img-card{
+    border-radius: 1rem 1rem 0 0;
     width: 100%;
     height: 168px;
-    background: var(--brand-purpleGrad);
+    /* background: var(--brand-purpleGrad); */
+    background: url(Images/mukesh-yadav-img.png);
 }
 
 .card .texts, .card .action-btn{
     margin: .8rem;
+    justify-content: space-between;
+    /* background: #000; */
 }
 
 .ratings{
@@ -170,23 +178,23 @@ body{
     font-size: 1rem;
 }
 
-.chat-btn{
-    display: flex;
+.chat-btn a{
     color: var(--primary-light);
     background: var(--brand-primary);
-    padding: .5rem 1rem;
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+    height: 2rem;
+    width: 6rem;
+    justify-content: center;
     border-radius: .4rem;
-    gap: .5rem;
 }
 
-.chat-btn i img{
-    width: 100%;
-    display: flex;
-    margin: var(--auto-margin-t-b);
+.chat-btn a:hover{
+    background: #125be2;
 }
-.chat-btn b{
-    font-size: 1rem;
-    line-height: 1.4rem;
+.chat-btn a i{
+    display: flex;
 }
 
 /* ------------------------------------------------------------------------------ */
