@@ -299,7 +299,7 @@ body{
     .teams-member{
         display: grid;
         grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         place-items: center;
         margin: var(--auto-margin-l-r);
         overflow: auto;
