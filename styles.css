@@ -295,11 +295,11 @@ body{
     }
 }
 
-@media only screen and (max-device-width: 768px) and (orientation: landscape) {
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
     .teams-member{
         display: grid;
         grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 2fr);
         place-items: center;
         margin: var(--auto-margin-l-r);
         overflow: auto;
