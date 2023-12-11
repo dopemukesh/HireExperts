@@ -349,9 +349,6 @@ body {
     color: var(--secondary-dark);
 }
 
-/* .card .img-chip a{
-} */
-
 
 .ratings {
     display: flex;
@@ -390,24 +387,12 @@ body {
         grid-template-rows: repeat(1, 1fr);
         grid-template-columns: repeat(3, 1fr);
         margin: var(--auto-margin-l-r);
+        place-items: center;
         overflow: auto;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
 }
-
-/* @media screen and (max-width: 1024px) {
-    .teams-member {
-        padding: 3rem 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-items: center;
-        margin: var(--auto-margin-l-r);
-        overflow: auto;
-        gap: 2rem;
-    }
-
-} */
 
 
 @media only screen and (max-width: 425px) {
