@@ -231,62 +231,55 @@ body{
 }
 
 
-@media only screen and (max-device-width: 425px) and (orientation: portrait) {
-    .header{
+@media only screen and (max-width: 425px) {
+    .header {
         height: 3rem;
     }
-    .nav{
+    .nav {
         padding: 0 .5rem;
     }
-    .logobox img{
+    .logobox img {
         width: 6rem;
     }
-    .nav-links{
+    .nav-links {
         display: none;
     }
-    .header .action-btn{
+    .header .action-btn {
         display: none;
     }
-    .nav i{
+    .nav i {
         width: 1.5rem;
         height: 1.5rem;
         display: flex;
         margin: var(--auto-margin-t-b);
     }
 
-
-    .teams-section{
-        width: 100%;
-        height: 32rem;
-        height: auto;
-    }
-    
-    .teams-member{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        row-gap: 3rem;
+    .teams-member {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        margin: var(--auto-margin-l-r);
+        overflow: auto;
+        gap: 2rem;
     }
 }
 
-
-@media screen and (max-device-width: 768px) {
-    .nav-links{
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .nav-links {
         display: none;
     }
-    .header .action-btn{
+    .header .action-btn {
         display: none;
     }
-    .nav i{
+    .nav i {
         width: 1.5rem;
         height: 1.5rem;
         display: flex;
         margin: var(--auto-margin-t-b);
     }
 
-    .teams-member{
+    .teams-member {
         display: grid;
-        grid-template-rows: repeat(1, 1fr);
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
         margin: var(--auto-margin-l-r);
@@ -295,15 +288,4 @@ body{
     }
 }
 
-@media screen and (max-device-width: 768px) and (orientation: landscape) {
-    .teams-member{
-        display: grid;
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(2, 2fr);
-        place-items: center;
-        margin: var(--auto-margin-l-r);
-        overflow: auto;
-        gap: 2rem;
-    }
-}
 /* ------------------------------------------------------------------------------ */
