@@ -94,9 +94,9 @@ body {
     width: 100%;
     height: 4rem;
     border-bottom: 1px solid var(--primary-dark);
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 1;
-    /* background: var(--brand-primary); */
 }
 
 .nav {
@@ -308,6 +308,9 @@ body {
     animation: slideDn 1s ease forwards;
 }
 
+.card:hover .img-card img{
+    transform: scale(1.1);
+}
 
 .card .img-card {
     overflow: hidden;
@@ -317,11 +320,12 @@ body {
     display: grid;
     place-content: center;
     background: var(--brand-greenGrad);
-
+    
 }
 
 .card .img-card img {
     width: 100%;
+    transition: transform 1s ease;
 }
 
 .card .texts,
@@ -329,6 +333,10 @@ body {
     margin: .8rem;
     justify-content: space-between;
     animation: slideleft 1.3s ease forwards;
+}
+
+.card .texts p{
+    color: var(--secondary-dark);
 }
 
 .card .texts .name-chip {
@@ -515,6 +523,14 @@ body {
         overflow: auto;
         gap: 2rem;
     }
+    /* .teams-member {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        margin: var(--auto-margin-l-r);
+        overflow: auto;
+        gap: 2rem;
+    } */
 }
 
 /* ------------------------------------------------------------------------------ */
