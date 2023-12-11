@@ -177,8 +177,7 @@ body {
 .hero-left .category{
     width: 80%;
     height: 4rem;
-    background: var(--primary-light);
-    border-radius: .5rem;
+    /* background: var(--primary-light); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,13 +187,21 @@ body {
 
 .category label{
     display: flex;
+    align-self: flex-start;
+    color: var(--primary-light);
+    background: var(--primary-dark);
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: .4rem .4rem 0 0;
 }
 .category input{
+    border-radius: 0 0.4rem 0.4rem 0.4rem;
     width: 100%;
     height: 100%;
     outline: none;
     border: none;
     padding: 1rem;
+    font-weight: 500;
 }
 
 
@@ -203,6 +210,9 @@ body {
     height: 100%;
     background: var(--brand-lightGreen);
 }
+
+
+
 /* --------------------------------------------------------- */
 
 
@@ -378,6 +388,37 @@ body {
         height: 1.5rem;
         display: flex;
         margin: var(--auto-margin-t-b);
+    }
+
+
+    .hero-contents {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        margin: var(--auto-margin-l-r);
+    }
+
+
+    .hero-left{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .hero-left h1{
+        font-weight: 800;
+        font-size: 2rem;
+    }
+    
+    
+    .hero-left p{
+        width: 80%;
+    }
+
+
+    .hero-left .category{
+        width: 95%;
     }
 
     .teams-member {
