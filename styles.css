@@ -391,12 +391,12 @@ body {
         grid-template-columns: repeat(3, 1fr);
         margin: var(--auto-margin-l-r);
         overflow: auto;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .teams-member {
         padding: 3rem 0;
         display: grid;
@@ -407,7 +407,7 @@ body {
         gap: 2rem;
     }
 
-}
+} */
 
 
 @media only screen and (max-width: 425px) {
@@ -464,7 +464,7 @@ body {
     }
 
 
-    .hero-left p {
+    .hero-left > p {
         width: 80%;
     }
 
@@ -515,6 +515,11 @@ body {
         height: 1.5rem;
         display: flex;
         margin: var(--auto-margin-t-b);
+    }
+
+    .hero-left h1 {
+        font-weight: 900;
+        font-size: 2.5rem;
     }
 
     .teams-member {
