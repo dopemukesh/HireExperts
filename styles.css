@@ -310,6 +310,7 @@ body {
     display: grid;
     place-content: center;
     background: var(--brand-purpleGrad);
+
 }
 
 .card .img-card img {
@@ -409,6 +410,7 @@ body {
     }
 
 
+/* hero section started */
     .hero{
         height: auto;
     }
