@@ -1,25 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the input element
-    var searchBox = document.getElementById('searchBox');
-    
-    // Get the initial value
-    var initialValue = searchBox.value;
+    // Get the elements
+    var spanElement = document.querySelector('#heading span');
+    var inputValue = document.getElementById('searchBox').value;
 
-    // Clear the initial value
-    searchBox.value = '';
+    // Get the initial values
+    var spanText = spanElement.textContent;
+    var initialValue = inputValue;
 
-    // Set up the typewriter effect
-    var index = 0;
-    var typeSpeed = 100; // milliseconds
+    // Clear the initial values
+    spanElement.textContent = '';
+    document.getElementById('searchBox').value = '';
 
-    function type() {
-        if (index < initialValue.length) {
-            searchBox.value += initialValue.charAt(index);
-            index++;
-            setTimeout(type, typeSpeed);
+    // Set up the typewriter effect for span text
+    var spanIndex = 0;
+    var spanSpeed = 200; // milliseconds
+
+    function typeSpan() {
+        if (spanIndex < spanText.length) {
+            spanElement.textContent += spanText.charAt(spanIndex);
+            spanIndex++;
+            setTimeout(typeSpan, spanSpeed);
+        } else {
+            // Once span is done, start typing the input value
+            typeInput();
         }
     }
 
-    // Trigger the typewriter effect
-    type();
+    // Set up the typewriter effect for input value
+    var inputIndex = 0;
+    var inputSpeed = 200; // milliseconds
+
+    function typeInput() {
+        var inputBox = document.getElementById('searchBox');
+        if (inputIndex < initialValue.length) {
+            inputBox.value += initialValue.charAt(inputIndex);
+            inputIndex++;
+            setTimeout(typeInput, inputSpeed);
+        }
+    }
+
+    // Trigger the typewriter effect for span text
+    typeSpan();
 });
