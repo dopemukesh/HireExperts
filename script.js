@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Set up the typewriter effect
     var index = 0;
-    var typeSpeed = 50; // milliseconds
+    var typeSpeed = 100; // milliseconds
 
     function type() {
         if (index < initialValue.length) {
