@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     src: url(Fonts/Poppins.ttf);
     font-family: poppins;
@@ -6,7 +9,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: poppins;
+    font-family: poppins,'Poppins', sans-serif;
     line-height: inherit;
     box-sizing: border-box;
     position: relative;
@@ -17,6 +20,7 @@
 :root {
     --primary-light: #fff;
     --primary-dark: #3C4852;
+    /* --primary-dark: #161719; */
     --secondary-dark: #78829A;
 
 
@@ -24,8 +28,10 @@
     /* it can be used for text highlighting and etc. */
     --brand-secondary: #08BD80;
     /* it can be used for call to action buttons */
+    --brand-offline: #dc143c;
     --brand-lightBlue: #F1F7FF;
     --brand-lightGreen: #ECFFF7;
+    --brand-lightDark: #EDE9F3;
 
     --brand-purpleGrad: linear-gradient(45deg, #2B0054 0%, #8300FF 100%);
     --brand-greenGrad: linear-gradient(45deg, #005454 0%, #00FFD1 100%);
@@ -36,49 +42,6 @@
     --auto-margin-t-b: auto 0;
     --auto-margin-l-r: 0 auto;
 }
-
-
-
-/* --------------------------------------------------------- */
-@keyframes slideDn {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes slideleft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-@keyframes slideright {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-/* --------------------------------------------------------- */
 
 
 
@@ -127,7 +90,7 @@ body {
     margin: var(--auto-margin-t-b);
     display: flex;
     gap: 0 2rem;
-    font-weight: 500;
+    font-weight: 600;
     animation: slideDn 1.5s ease;
 }
 
