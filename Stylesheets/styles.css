@@ -349,16 +349,14 @@ body {
 
 /* ------------------------------------------------------------------------------ */
 
-@media screen and (max-width: 1024px) and (orientation:portrait) {
+@media screen and (max-width: 1024px) {
     .teams-member {
-        padding: 3rem 1rem;
         display: grid;
-        grid-template-rows: repeat(1, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        margin: var(--auto-margin-l-r);
         place-items: center;
+        margin: var(--auto-margin-l-r);
         overflow: auto;
-        gap: 1rem;
+        gap: 2rem;
     }
 
 }
@@ -484,14 +482,6 @@ body {
         overflow: auto;
         gap: 2rem;
     }
-    /* .teams-member {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-        margin: var(--auto-margin-l-r);
-        overflow: auto;
-        gap: 2rem;
-    } */
 }
 
 /* ------------------------------------------------------------------------------ */
