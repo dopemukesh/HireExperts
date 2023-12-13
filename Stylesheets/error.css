@@ -1,16 +1,102 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body {
+    background: #FFFBF9;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    /* font-family: poppins; */
+    position: relative;
 }
 
+
+
+.main-container {
+    text-align: center;
+    width: 390px;
+    height: 575px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px;
+    border-radius: 35px;
+    background: #FCFDFF;
+    box-shadow: 21px 27px 50px -8px rgba(212, 178, 178, 0.17);
+}
+
+.imgBox {
+    width: 100%;
+    height: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+
+.textsBox {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.textsBox h2 {
+    color: #000;
+}
+
+.textsBox p {
+    color: #9E9E9E;
+}
+
+.btnBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnBox a {
+    padding: 0 3rem;
+    border-radius: 2.5rem;
+    height: 56px;
+    color: #fff;
+    background: #307EF4;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(48, 126, 244, 0.25);
+}
+.btnBox a:hover {
+    background: #4791ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Previous error message css 👇 */
+
+/* 
 .texts {
     z-index: 1;
     display: flex;
@@ -21,8 +107,6 @@ body {
     border: 1px solid red;
     border-radius: 1rem;
     gap: 8px;
-    /* background-color: #fff; */
-    /* filter: drop-shadow(0 0 1rem rgb(233, 233, 233)); */
 }
 
 .texts p {
@@ -45,4 +129,4 @@ button{
     font-weight: 700;
     color: #fff;
     background: #7D25EF;
-} 
+}  */

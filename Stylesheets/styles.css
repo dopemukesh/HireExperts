@@ -19,15 +19,13 @@
 
 :root {
     --primary-light: #fff;
-    --primary-dark: #3C4852;
-    /* --primary-dark: #161719; */
+    /* --primary-dark: #3C4852; */
+    --primary-dark: #161719;
     --secondary-dark: #78829A;
 
 
     --brand-primary: #2D81F7;
-    /* it can be used for text highlighting and etc. */
     --brand-secondary: #08BD80;
-    /* it can be used for call to action buttons */
     --brand-offline: #dc143c;
     --brand-lightBlue: #F1F7FF;
     --brand-lightGreen: #ECFFF7;
