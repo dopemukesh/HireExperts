@@ -141,6 +141,82 @@ body {
     display: none;
 }
 
+
+
+/* Codes for sidebar  */
+.sidebar {
+    /* Set initial state to be hidden */
+    transform: translateX(200%);
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%; /* Adjust the width as needed */
+    background-color: var(--primary-dark); /* Adjust the background color as needed */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 1rem 0;
+}
+
+.sidebar #closeIcon img{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+
+.sidebar a{
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 4px;
+    width: 80%;
+    /* background: var(--brand-primary); */
+    color: var(--primary-light);
+
+}
+
+.sidebar a:hover{
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 4px;
+    width: 80%;
+    background: var(--brand-primary);
+    color: var(--primary-light);
+}
+
+.sidebar a:focus{
+    background: var(--brand-primary);
+}
+
+/* Apply this class when the sidebar is open */
+body.sidebar-open .sidebar {
+    transform: translateX(100%);
+}
+
+body.sidebar-open {
+    overflow: hidden;
+}
+
+body.sidebar-open .sidebar {
+    position: fixed;
+}
+
+body.sidebar-open .hero, .teams-section {
+    position: sticky;
+}
+
+
+
+
+
+
 /* --------------------------------------------------------- */
 
 
@@ -246,17 +322,23 @@ body {
 .teams-member {
     max-width: var(--full-size);
     margin: var(--auto-margin-l-r);
-    padding: 3rem 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* overflow: auto; */
-    place-items: center;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: row;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    /* place-items: center; */
+    overflow: auto;
     gap: 2rem;
 
 }
 
+
+
+
 .card {
-    width: 19rem;
+    z-index: 5;
+    min-width: 19rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
@@ -319,12 +401,84 @@ body {
 }
 
 
+/* for ratings section */
 .ratings {
     display: flex;
     margin: var(--auto-margin-t-b);
     font-size: 1rem;
     animation: slideleft 1.6s ease forwards;
 }
+
+/* Add this CSS to style the modal */
+.modal {
+    z-index: 300;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: .5rem;
+    text-align: center;
+    
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    /* background: red; */
+    cursor: pointer;
+  }
+  
+  .ratings-options {
+    margin-top: 20px;
+  }
+  
+  .star {
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+ 
+.star.rated {
+    color: rgb(255, 238, 0);
+    filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
+  }
+  
+  
+  #submitRating {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--brand-secondary);
+    color: #fff;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+  }
+
+  
+  #ratingDisplay{
+    color: var(--brand-secondary);
+    width: fit-content;
+    display: block;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: .8rem;
+  }
+
+
 
 .chat-btn a {
     color: var(--primary-light);
@@ -349,15 +503,115 @@ body {
 
 /* ------------------------------------------------------------------------------ */
 
+
+
+
+/* Styles for social proof section */
+.socialProofs{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+
+
+.socialProofs .container{
+    z-index: -1;
+    display: flex;
+    max-width: var(--full-size);
+    margin: var(--auto-margin-l-r);
+    color: var(--primary-light);
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.titleContainer{
+    width: 100%;
+    margin: 1rem 0;
+    color: var(--primary-dark);
+    /* flex-direction: row; */
+}
+
+.container > p{
+    color: #dc143c;
+    font-size: .8rem;
+    font-weight: 600;
+    background: #ffdddd;
+    margin: var(--auto-margin-l-r);
+    width: fit-content;
+    top: 1rem;
+    z-index: 1;
+    padding: .3rem;
+    border-radius: 4px;
+}
+
+
+
+.clients-icons{
+    /* width: 100%; */
+    padding: 1rem;
+    border-radius: .5rem;
+    background: var(--brand-lightDark);
+    display: flex;
+    justify-content: center;
+    margin: var(--auto-margin-l-r);
+    row-gap: 1rem;
+    overflow: hidden;
+}
+.clients-icons img{
+    filter: blur(5px);
+    width: fit-content;
+    height: 56px;
+    opacity: 30%;
+
+}
+
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    background: #000;
+}
+
+.footer-contents{
+    padding: 1rem;
+    max-width: var(--full-size);
+    height: 100%;
+    display: flex;
+    margin: var(--auto-margin-l-r);
+    background: var(--primary-dark);
+    justify-content: space-around;
+}
+
+.socialMedia, .resources p{
+    font-weight: 500;
+    color: var(--secondary-dark);
+}
+.socialMedia a, .resources a{
+    top: 1rem;
+    display: flex;
+    color: var(--primary-light);
+    flex-direction: column;
+}
+
+/* ------------------------------------------------------------------------------ */
+
 @media screen and (max-width: 1024px) {
-    .teams-member {
+    /* .teams-member {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
         margin: var(--auto-margin-l-r);
         overflow: auto;
         gap: 2rem;
-    }
+    } */
 
 }
 
@@ -442,14 +696,29 @@ body {
 
 
 
-    .teams-member {
+    /* .teams-member {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         place-items: center;
         margin: var(--auto-margin-l-r);
-        overflow: auto;
+        overflow: auto;  
         gap: 2rem;
+    } */
+
+    .container .clients-icons{
+        margin: var(--auto-margin-l-r);
+        margin: 0 1rem;
     }
+    .container .clients-icons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clients-icons img{
+        height: 46px;
+    }
+
+
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
@@ -473,14 +742,14 @@ body {
         font-size: 2.5rem;
     }
 
-    .teams-member {
+    /* .teams-member {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
         margin: var(--auto-margin-l-r);
         overflow: auto;
         gap: 2rem;
-    }
+    } */
 }
 
 /* ------------------------------------------------------------------------------ */
