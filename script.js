@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var clickedIndex = Array.from(stars).indexOf(star);
             for (var i = 0; i <= clickedIndex; i++) {
                 stars[i].classList.add('rated');
-                
+
             }
         });
     });
