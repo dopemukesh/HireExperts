@@ -15,6 +15,8 @@
 </head>
 
 <body>
+
+    <!-- header section starts -->
     <div class="header">
         <div class="nav">
             <div class="logobox">
@@ -22,11 +24,11 @@
             </div>
 
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="error-page.html">Services</a>
-                <a href="error-page.html">Mini Projects</a>
-                <a href="error-page.html">Community</a>
-                <a href="error-page.html">About</a>
+                <a id="home-link" href="index.html">Home</a>
+                <a id="services-link" href="error-page.html">Services</a>
+                <a id="miniProject-link" href="miniProject.html">Mini Projects</a>
+                <a id="community-link" href="error-page.html">Community</a>
+                <a id="about-link" href="error-page.html">About</a>
             </div>
 
             <div class="action-btn">
@@ -55,8 +57,10 @@
             <a href="error-page.html" class="signUp">Sign Up</a>
         </div>
     </div>
+    <!-- header section ends -->
 
 
+    <!-- hero section starts -->
     <div class="hero">
         <div class="hero-contents">
             <div class="hero-left">
@@ -64,9 +68,11 @@
                 <p>Each month a new Expert will appear here / also <b>#You</b> can be one of them</p>
 
                 <div class="category">
-                    <p for="searchBox">Search category...</p>
-                    <input type="search" value="HTML | CSS | JS and in #React" id="searchBox">
-
+                    <p>Search category...</p>
+                    <div class="category-input">
+                        <input type="search" value="HTML | CSS | JS and in #React" id="searchBox">
+                        <img src="Icons/search-icon.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="hero-right">
@@ -74,7 +80,10 @@
             </div>
         </div>
     </div>
+    <!-- hero section ends -->
 
+
+    <!-- teams / cards section startss -->
     <div class="teams-section">
         <div class="teams-member">
 
@@ -230,7 +239,10 @@
         <div style="width: var(--max-size); height: 54px; background: #ffffff; top: -50px; z-index: 1;"></div>
 
     </div>
+    <!-- teams / cards section ends -->
 
+
+    <!-- clients section starts -->
     <div class="socialProofs">
         <div class="container">
             <div class="titleContainer">
@@ -246,9 +258,34 @@
             </div>
         </div>
     </div>
+    <!-- clients section ends -->
 
-    .
 
+    <!-- newsLetter section starts -->
+    <div class="newsLetter">
+        <div class="newsLetter-container">
+            <div class="img-container">
+                <img src="Illustrations/page-not-found.svg" alt="">
+            </div>
+
+            <div class="texts-container">
+                <div class="main-text">
+                    <h1>Get the latest updates</h1>
+                    <p>Please subscribe our newsLetter for the upcoming events</p>
+                </div>
+
+                <div class="inputBox">
+                    <input type="email" placeholder="hireExperts@gmail.com">
+                    <button type="button">Submit</button>
+                </div>
+                <p>By subscribing to our newsLetter you agree to our <a href="#terms">Terms</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- newsLetter section ends -->
+
+
+    <!-- footer section starts -->
     <div class="footer">
         <div class="footer-contents">
             <div class="socialMedia">
@@ -261,13 +298,14 @@
                 <a href="#miniprojects">Mini Projects</a>
                 <a href="#support">Support</a>
             </div>
-        
+
         </div>
         <div class="copyright">
             <p>Copyright © 2023 | All Rights Reserved</p>
             <p>Developed by <b>Mukesh Yadav</b></p>
         </div>
     </div>
+    <!-- footer section ends -->
 
 </body>
 
