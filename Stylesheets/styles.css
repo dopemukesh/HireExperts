@@ -306,7 +306,7 @@ body.sidebar-open .hero,
 }
 
 .card:hover .img-card img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .card .img-card {
@@ -317,10 +317,11 @@ body.sidebar-open .hero,
     display: grid;
     place-content: center;
     background: var(--brand-greenGrad);
-
+    
 }
 
 .card .img-card img {
+    transform: scale(1.1);
     width: 100%;
     transition: transform 1s ease;
 }
