@@ -129,6 +129,10 @@
     color: var(--primary-light);
 }
 
+.sidebar .signUp{
+    border: 1px dashed var(--secondary-dark);
+}
+
 .sidebar a:hover {
     background: var(--secondary-dark);
     color: var(--primary-light);
@@ -157,19 +161,18 @@ body.sidebar-open .hero,
     position: sticky;
 }
 
-
-
-
-
-
 /* --------------------------------------------------------- */
 
 
 
 
-/* --------------------------------------------------------- */
+
+
+
+
+
+/* <!-- hero section starts --> */
 .hero {
-    /* padding-top: 4rem; */
     width: 100%;
     height: 29rem;
 }
@@ -261,14 +264,13 @@ body.sidebar-open .hero,
     animation: slideright 1.3s ease forwards;
     filter: drop-shadow(0px 0px 56px rgba(100, 118, 139, 0.15));
 }
-
-
-/* --------------------------------------------------------- */
-
+/* <!-- hero section ends --> */
 
 
 
-/* --------------------------------------------------------- */
+
+
+/* <!-- teams / cards section starts --> */
 .teams-section {
     width: 100%;
     height: auto;
@@ -280,9 +282,6 @@ body.sidebar-open .hero,
     padding: 3rem 1rem;
     display: flex;
     flex-direction: row;
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
-    /* place-items: center; */
     overflow: auto;
     gap: 2rem;
 
@@ -393,7 +392,6 @@ body.sidebar-open .hero,
     top: 10px;
     right: 10px;
     font-size: 28px;
-    /* background: red; */
     cursor: pointer;
 }
 
@@ -434,7 +432,6 @@ body.sidebar-open .hero,
 }
 
 
-
 .chat-btn a {
     color: var(--primary-light);
     background: var(--brand-primary);
@@ -455,13 +452,12 @@ body.sidebar-open .hero,
 .chat-btn a i {
     display: flex;
 }
-
-/* ------------------------------------------------------------------------------ */
-
+/* <!-- teams / cards section ends --> */
 
 
 
-/* Styles for social proof section */
+
+/* <!-- clients section starts --> */
 .socialProofs {
     width: 100%;
     height: auto;
@@ -482,13 +478,13 @@ body.sidebar-open .hero,
     margin-bottom: 4rem;
 }
 
-.titleContainer {
+.socialProofs .container .titleContainer {
     width: 100%;
     margin: 1rem 0;
     color: var(--primary-dark);
 }
 
-.container > p {
+.socialProofs .container > p {
     color: var(--brand-offline);
     font-size: .8rem;
     font-weight: 600;
@@ -503,7 +499,7 @@ body.sidebar-open .hero,
 
 
 
-.clients-icons {
+.socialProofs .container .clients-icons {
     padding: 1rem;
     border-radius: .5rem;
     background: var(--brand-lightBlue);
@@ -521,7 +517,7 @@ body.sidebar-open .hero,
     opacity: 30%;
 
 }
-
+/* <!-- clients section ends --> */
 
 
 .footer{
@@ -656,7 +652,7 @@ body.sidebar-open .hero,
 }
 
 .inputBox button{
-    padding: .58rem;
+    padding: .56rem;
     border: none;
     font-weight: 600;
     border-radius: 0 .3rem .3rem 0;
