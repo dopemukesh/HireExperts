@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="Stylesheets/root.css">
+    <link rel="stylesheet" href="Stylesheets/styles.css">
+    <link rel="stylesheet" href="Stylesheets/login.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="login-wrapper">
+
+            <div class="side-tab">
+                <div class="texts">
+                    <h3 id="login-tab">Please login</h3>
+                    <i></i>
+                    <p>with your username</p>
+                </div>
+
+                <div class="image">
+                    <img src="Images/rocket.png" alt="">
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="login">
+
+                    <div class="close-icon" id="closeIcon">
+                        <a href="index.html">
+                            <img src="Icons/back-arrow-icon.svg" alt="Close">
+                        </a>
+                    </div>
+
+                    <div class="texts">
+                        <h3 id="login-tab">Login</h3>
+                    </div>
+
+                    <!-- <p>Username</p> -->
+                    <input type="email" id="email" required placeholder="Username">
+
+                    <!-- <p>Password</p> -->
+                    <input type="password" id="password" required placeholder="Password">
+
+                    <div id="checkbox">
+                        <input type="checkbox" id="check">
+                        <label for="check">I accept the <span><a href="#t&c">Terms & Condition</a></span></label>
+                    </div>
+
+                    <input type="submit" id="login-btn" value="Login">
+                    <p id="createAccount">I have not Account ? <a href="#signup">Register</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

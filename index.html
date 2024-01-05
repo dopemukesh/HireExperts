@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="Stylesheets/styles.css" type="text/css">
     <!-- <link rel="stylesheet" href="Stylesheets/animation.css" type="text/css"> -->
 
-    <script src="Js/main-script.js"></script>
 
 </head>
 
@@ -19,12 +18,12 @@
     <!-- header section starts -->
     <div class="header">
         <div class="nav">
-            <div class="logobox">
+            <div class="logobox">#8167ff
                 <a href="index.html"><img src="Images/HireExperts-logo02.svg" alt="logo"></a>
             </div>
 
             <div class="nav-links">
-                <a id="home-link" href="index.html">Home</a>
+                <a id="home-link" href="index.html" class="default">Home</a>
                 <a id="services-link" href="error-page.html">Services</a>
                 <a id="miniProject-link" href="miniProject.html">Mini Projects</a>
                 <a id="community-link" href="error-page.html">Community</a>
@@ -32,12 +31,12 @@
             </div>
 
             <div class="action-btn">
-                <a href="error-page.html" class="login">Login</a>
+                <a href="login.html" class="login">Login</a>
                 <a href="error-page.html" class="signUp">Sign Up</a>
             </div>
 
             <i>
-                <img src="Icons/menu-icon.svg" alt="menu" id="menuIcon">
+                <img src="Icons/menu-icon-bar.svg" alt="menu" id="menuIcon">
             </i>
         </div>
 
@@ -53,7 +52,7 @@
             <a href="error-page.html">Mini Projects</a>
             <a href="error-page.html">Community</a>
             <a href="error-page.html">About</a>
-            <a href="error-page.html" class="login">Login</a>
+            <a href="login.html" class="login">Login</a>
             <a href="error-page.html" class="signUp">Sign Up</a>
         </div>
     </div>
@@ -75,9 +74,28 @@
                     </div>
                 </div>
             </div>
+
             <div class="hero-right">
-                <img src="Images/dope-insta.webp" alt="Image missing...!">
+                <img src="Images/3d-boy-using-laptop.svg" alt="Image missing...!">
+                
+                <div class="userInfo" id="userInfo">
+                    <div class="userDetails">
+
+                        <div class="userPic">
+                            <img src="Images/image-with-bg.svg" alt="">
+                        </div>
+                        <div class="userName">
+                            <b>Mukesh Yadav</b>
+                            <p>Expert of ReactJs</p>
+                        </div>
+                        <div class="userRatings">
+                            <p>4&#9733;</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+            
         </div>
     </div>
     <!-- hero section ends -->
@@ -104,13 +122,16 @@
 
             <div class="card card1">
                 <div class="img-card">
-                    <img src="Images/mukesh-yadav-img.png" alt="Image missing...!">
+                    <div class="img-chip">
+                        <a href="#hinglish">Hinglish | Urdu</a>
+                    </div>
+                    <img src="Images/mukesh-yadav-HTML.svg" alt="">
                 </div>
                 <div class="texts">
                     <div class="name-chip">
-                        <h2>Mukesh Yadav</h2>
-                        <div class="img-chip">
-                            <a href="#webdeveloper">#webdeveloper</a>
+                        <h3>Mukesh Yadav</h3>
+                        <div class="text-chip">
+                            <a href="#web-developer">#web-developer</a>
                         </div>
                     </div>
                     <p>I am <b>#Expert</b> in HTML | CSS | JS and in #React</p>
@@ -121,7 +142,6 @@
                 <div class="action-btn">
 
                     <div class="ratings">
-                        <!-- <b>Ratings :&nbsp;&nbsp;</b>&#9733;&#9733;&#9733;&#9733;&#9733; -->
                         <b>Ratings :&nbsp;&nbsp;</b><img src="Icons/stars.svg" alt="">
                     </div>
                     <div class="chat-btn">
@@ -135,33 +155,25 @@
 
             <div class="card card2">
                 <div class="img-card">
-                    <img src=" " alt="Image missing...!">
+                    <div class="img-chip">
+                        <a href="#hinglish">Hinglish</a>
+                    </div>
+                    <img src="Images/mukesh-yadav-Java.svg" alt="">
                 </div>
                 <div class="texts">
-                    <h2 id="userName">Satyam Chauhan</h2>
-                    <p>I am <b>#Expert</b> in Cyber Security</p>
-                </div>
-                <div class="action-btn">
-                    <div class="ratings">
-                        <b>Ratings :&nbsp;&nbsp;</b><img src="Icons/stars.svg" alt="">
+                    <div class="name-chip">
+                        <h3>Mukesh Yadav</h3>
+                        <div class="text-chip">
+                            <a href="#app-developer">#app-developer</a>
+                        </div>
                     </div>
-                    <div class="chat-btn" id="chat">
-                        <a href="error-page.html">
-                            <i><img src="Icons/chat-icon.svg" alt=""></i>
-                            <b>Chat</b>
-                        </a>
-                    </div>
+                    <p>The <b>#Expert</b> of #Java</p>
                 </div>
-            </div>
-            <div class="card card3">
-                <div class="img-card">
-                    <img src=" " alt="Image missing...!">
-                </div>
-                <div class="texts">
-                    <h2>Mukesh Yadav</h2>
-                    <p>I am <b>#Expert</b> in HTML | CSS | JS and in #React</p>
-                </div>
+
+                <div id="ratingDisplay"></div>
+
                 <div class="action-btn">
+
                     <div class="ratings">
                         <b>Ratings :&nbsp;&nbsp;</b><img src="Icons/stars.svg" alt="">
                     </div>
@@ -173,15 +185,94 @@
                     </div>
                 </div>
             </div>
-            <div class="card card4">
+
+            <div class="card card3">
                 <div class="img-card">
-                    <img src=" " alt="Image missing...!">
+                    <div class="img-chip">
+                        <a href="#hinglish">Hinglish</a>
+                    </div>
+                    <img src="Images/mukesh-yadav-img.png" alt="">
                 </div>
                 <div class="texts">
-                    <h2>Mukesh Yadav</h2>
-                    <p>I am <b>#Expert</b> in HTML | CSS | JS and in #React</p>
+                    <div class="name-chip">
+                        <h3>Satyam Chauhan</h3>
+                        <div class="text-chip">
+                            <a href="#webdeveloper">#cyber-security</a>
+                        </div>
+                    </div>
+                    <p>The <b>#Expert</b> of C | C++ | Python</p>
                 </div>
+
+                <div id="ratingDisplay"></div>
+
                 <div class="action-btn">
+
+                    <div class="ratings">
+                        <b>Ratings :&nbsp;&nbsp;</b><img src="Icons/stars.svg" alt="">
+                    </div>
+                    <div class="chat-btn">
+                        <a href="error-page.html">
+                            <i><img src="Icons/chat-icon.svg" alt=""></i>
+                            <b>Chat</b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card4">
+                <div class="img-card">
+                    <div class="img-chip">
+                        <a href="#unknown">Unknown</a>
+                    </div>
+                    <img src="Images/mukesh-yadav-img.png" alt="">
+                </div>
+                <div class="texts">
+                    <div class="name-chip">
+                        <h3>Coming soon...</h3>
+                        <div class="text-chip">
+                            <a href="#unknown">Unknown</a>
+                        </div>
+                    </div>
+                    <p>No details found !</p>
+                </div>
+
+                <div id="ratingDisplay"></div>
+
+                <div class="action-btn">
+
+                    <div class="ratings">
+                        <b>Ratings :&nbsp;&nbsp;</b><img src="Icons/stars.svg" alt="">
+                    </div>
+                    <div class="chat-btn">
+                        <a href="error-page.html">
+                            <i><img src="Icons/chat-icon.svg" alt=""></i>
+                            <b>Chat</b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card5">
+                <div class="img-card">
+                    <div class="img-chip">
+                        <a href="#unknown">Unknown</a>
+                    </div>
+                    <img src="Images/mukesh-yadav-img.png" alt="">
+                </div>
+                <div class="texts">
+                    <div class="name-chip">
+                        <h3>Coming soon...</h3>
+                        <div class="text-chip">
+                            <a href="#unknown">Unknown</a>
+                        </div>
+                    </div>
+                    <p>No details found !</p>
+                </div>
+
+                <div id="ratingDisplay"></div>
+
+                <div class="action-btn">
+
                     <div class="ratings">
                         <b>Ratings :&nbsp;&nbsp;</b><img src="Icons/stars.svg" alt="">
                     </div>
@@ -268,6 +359,10 @@
     </div>
     <!-- footer section ends -->
 
+
+
+    <script src="Js/main-script.js"></script>
+    
 </body>
 
 </html>

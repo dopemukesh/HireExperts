@@ -100,29 +100,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    // // Code for the header loader
-    // // In main-script.js
-    // // document.addEventListener("DOMContentLoaded", function () {
-    //     // Get the current page's filename (e.g., "index.html" or "error-page.html")
-    //     var currentPage = window.location.pathname.split("/").pop();
-
-    //     // Remove the "active" class from all links
-    //     var navLinks = document.querySelectorAll(".nav-links a");
-    //     navLinks.forEach(function (link) {
-    //         link.classList.remove("active");
-    //     });
-
-    //     // Add the "active" class to the link corresponding to the current page
-    //     var currentNavLink = document.getElementById(currentPage.replace(".html", "-link"));
-    //     if (currentNavLink) {
-    //         currentNavLink.classList.add("active");
-    //     }
-    // // });
-
-
-
-
-
-
-
 });
