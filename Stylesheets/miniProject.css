@@ -15,7 +15,7 @@
 
 #wrapper{
     width: 100%;
-    background: var(--brand-primarylight);
+    background: var(--brand-secondary);
     margin: var(--auto-margin-l-r);
 }
 
@@ -24,11 +24,33 @@ aside{
     height: 100vh;
     color: #fff;
     background: var(--brand-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
+.sideBar{
+    display: flex;
+    flex-direction: column;
+}
 
+.sideBar h1{
+    font-size: 3rem;
+}
 
+.sideBar span a{
+    color: var(--textColor-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--primaryColor-light);
+    font-weight: 500;
+}
 
+.sideBar span2{
+    font-size: 4rem
+}
 
 
 

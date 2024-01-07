@@ -1,8 +1,19 @@
+
+.footer{
+    position: fixed;
+    bottom: 0;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+}
+
 .main-wrapper {
+    top: 4rem;
     width: 100%;
-    /* height: auto; */
     display: flex;
-    background: #FFFBF9;
+    background: var(--primaryColor-light);
     padding: 0 1rem;
 }
 
@@ -13,9 +24,10 @@
     display: flex;
     flex-direction: row;
     margin: 10rem auto;
+    border: 2px solid var(--tertiaryColor-dark);;
     border-radius: .5rem;
     overflow: hidden;
-    box-shadow: 21px 27px 50px 8px #d4b2b22b;
+    box-shadow: 0px 0px 50px 8px #94adcf1f;
 }
 
 .side-tab {
@@ -29,8 +41,9 @@
     gap: 1rem;
 }
 
-i{
+.texts i{
     display: flex;
+    left: 32%;
 }
 
 .side-tab .texts{
@@ -52,9 +65,8 @@ i{
     width: 1px;
     height: 3px;
     background: var(--brand-primary);
-    opacity: 0;
-    transform-origin: left;
-    transition: transform 2s ease-in-out, background 1s ease-in-out, opacity 3s ease-in-out;
+    transform-origin: center;
+    transition: transform 2s ease, opacity 2s ease-in-out;
 }
 
 .side-tab h3:hover + i {
@@ -64,8 +76,7 @@ i{
 }
 
 .side-tab h3 + i {
-    transform: scaleX(1);
-    opacity: 0;
+    transform: scaleX(0);
 }
 
 
@@ -97,17 +108,21 @@ i{
     display: none;
 }
 
+
 .login-box > input{
     width: 224px;
     padding: .5rem 1rem;
     border-radius: .3rem;
-    border: none;
+    color: var(--textColor-dark);
+    border: 2px solid var(--tertiaryColor-dark);
     outline: none;
-    background: var(--brand-lightDark);
     font-size: 1rem;
+
 }
 
-
+.login-box > input:focus{
+    border-bottom: 2px solid var(--brand-primary);
+}
 
 #checkbox{
     display: flex;
@@ -131,7 +146,7 @@ i{
 
 #login-btn{
     background: var(--brand-primary);
-    color: var(--primary-light);
+    color: var(--primaryColor-light);
     margin-top: 2rem;
     cursor: pointer;
 }
