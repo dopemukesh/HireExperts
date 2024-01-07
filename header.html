@@ -8,17 +8,17 @@
             <a href="index.html">Home</a>
             <a href="error-page.html">Services</a>
             <a href="miniProject.html">Mini Projects</a>
-            <a href="error-page.html">Community</a>
-            <a href="error-page.html">About</a>
+            <a href="community.html">Community</a>
+            <a href="about.html">About</a>
         </div>
 
         <div class="action-btn">
-            <a href="error-page.html" class="login">Login</a>
+            <a href="login.html" class="login">Login</a>
             <a href="error-page.html" class="signUp">Sign Up</a>
         </div>
 
         <i>
-            <img src="Icons/menu-icon.svg" alt="menu" id="menuIcon">
+            <img src="Icons/menu-icon-bar.svg" alt="menu" id="menuIcon">
         </i>
     </div>
 
@@ -32,9 +32,25 @@
         <a href="index.html">Home</a>
         <a href="error-page.html">Services</a>
         <a href="miniProject.html">Mini Projects</a>
-        <a href="error-page.html">Community</a>
-        <a href="error-page.html">About</a>
-        <a href="error-page.html" class="login">Login</a>
+        <a href="community">Community</a>
+        <a href="about.html">About</a>
+        <a href="login.html" class="login">Login</a>
         <a href="error-page.html" class="signUp">Sign Up</a>
     </div>
 </div>
+
+<!-- <script src="header.js"></script> -->
+<script>
+    var menuIcon = document.querySelector('#menuIcon');
+    var closeIcon = document.querySelector('#closeIcon');
+    var body = document.body;
+
+    menuIcon.addEventListener('click', function () {
+        body.classList.toggle('sidebar-open');
+    });
+
+    closeIcon.addEventListener('click', function () {
+        body.classList.remove('sidebar-open');
+    });
+
+</script>

@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="Stylesheets/root.css">
     <link rel="stylesheet" href="Stylesheets/styles.css">
     <link rel="stylesheet" href="Stylesheets/login.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
+
+    <div id="head_content"></div>
+
     <div class="main-wrapper">
         <div class="login-wrapper">
 
@@ -28,13 +33,13 @@
             </div>
 
             <div class="input-box">
-                <div class="login">
+                <div class="login-box">
 
-                    <div class="close-icon" id="closeIcon">
+                    <!-- <div class="close-icon" id="closeIcon">
                         <a href="index.html">
                             <img src="Icons/back-arrow-icon.svg" alt="Close">
                         </a>
-                    </div>
+                    </div> -->
 
                     <div class="texts">
                         <h3 id="login-tab">Login</h3>
@@ -59,6 +64,11 @@
         </div>
     </div>
 
-</body>
+    <div id="footer_content"></div>
 
+</body>
+<script>
+    $('#head_content').load('header.html');
+    $('#footer_content').load('footer.html');
+</script>
 </html>

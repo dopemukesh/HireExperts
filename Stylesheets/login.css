@@ -1,9 +1,9 @@
 .main-wrapper {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    /* height: auto; */
     display: flex;
-    /* background: var(--primary-dark); */
     background: #FFFBF9;
+    padding: 0 1rem;
 }
 
 .login-wrapper {
@@ -12,11 +12,10 @@
     height: 456px;
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin: 10rem auto;
     border-radius: .5rem;
     overflow: hidden;
-    border: 2px solid #4d01ff21;
-    box-shadow: 21px 27px 50px -8px #d4b2b22b;
+    box-shadow: 21px 27px 50px 8px #d4b2b22b;
 }
 
 .side-tab {
@@ -79,32 +78,26 @@ i{
     align-items: center;
 }
 
-.login{
+.login-box{
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
     align-items: center;
-    text-align: center;
 }
 
-.login .close-icon{
-    display: flex;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    bottom: 2rem;
-    opacity: 50%;
-}
-
-.login .close-icon img{
-    height: 100%;
-}
-
-.login .texts h3{
+/* .login-box .close-icon{
     display: none;
 }
 
-.login > input{
+.login-box .close-icon img{
+    height: 100%;
+} */
+
+.login-box .texts h3{
+    display: none;
+}
+
+.login-box > input{
     width: 224px;
     padding: .5rem 1rem;
     border-radius: .3rem;
@@ -175,7 +168,7 @@ i{
         display: none;
     }
 
-    .login .texts h3{
+    .login-box .texts h3{
         display: inline-block;
         bottom: 2rem;
         color: var(--brand-primary);
@@ -197,7 +190,7 @@ i{
         display: none;
     }
 
-    .login .texts h3{
+    .login-box .texts h3{
         display: inline-block;
         bottom: 2rem;
         color: var(--brand-primary);

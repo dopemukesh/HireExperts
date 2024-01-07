@@ -17,22 +17,24 @@
 
 
 :root {
-    --primary-light: #fff;
-    /* --primary-dark: #3C4852; */
-    --primary-dark: #161718;
-    --secondary-dark: #4A4F5C;
-    --tertiary-dark: #2E333D;
+    --primaryColor-light: #fff;
+    --primaryColor-dark: #161719;
+    --secondaryColor-dark: #202329;
+    --tertiaryColor-dark: #F4F4F4;
+    
+    --textColor-dark: #2E333D;
+    --textColor-lightdark: #928BA6;
 
 
     --brand-primary: #7054ff;
+    --brand-primarylight: #C6B0FF;
     --brand-secondary: #08BD80;
     --brand-offline: #dc143c;
     --brand-offlineLight: #FFE2E8;
     --brand-lightBlue: #F1F7FF;
     --brand-lightGreen: #ECFFF7;
-    --brand-lightDark: #F4F0FA;
 
-    --brand-purpleGrad: linear-gradient(45deg, #2B0054 0%, #8300FF 100%);
+    --brand-purpleGrad: linear-gradient(45deg, #1d0038 0%, #9f39ff 100%);
     --brand-greenGrad: linear-gradient(45deg, #005454 0%, #00FFD1 100%);
 
     --full-size: 1440px;

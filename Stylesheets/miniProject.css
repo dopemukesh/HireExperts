@@ -1,0 +1,39 @@
+
+.header{
+    position: fixed;
+    background: white;
+}
+
+#content_wrapper{
+    top: 4rem;
+    max-width: var(--full-size);
+    height: 100%;
+    display: flex;
+    margin: var(--auto-margin-l-r);
+    flex-direction: column;
+}
+
+#wrapper{
+    width: 100%;
+    background: var(--brand-primarylight);
+    margin: var(--auto-margin-l-r);
+}
+
+aside{
+    width: 256px;
+    height: 100vh;
+    color: #fff;
+    background: var(--brand-primary);
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 425px) {
+    #content_wrapper{
+        top: 3rem;
+    }
+}
