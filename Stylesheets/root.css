@@ -18,12 +18,12 @@
 
 :root {
     --primaryColor-light: #fff;
-    --primaryColor-dark: #161719;
-    --secondaryColor-dark: #202329;
+    --primaryColor-dark: #0f1623;
+    --secondaryColor-dark: #1f2937;
     --tertiaryColor-dark: #F4F4F4;
     
     --textColor-dark: #2E333D;
-    --textColor-lightdark: #928BA6;
+    --textColor-lightdark: #5A6374;
 
 
     --brand-primary: #7054ff;

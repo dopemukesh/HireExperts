@@ -6,7 +6,7 @@
     border-bottom: 1px solid var(--primaryColor-dark);
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 31000;
     background: var(--primaryColor-light);
 }
 
@@ -136,14 +136,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 64px;
 }
 
 
 .sidebar a {
+    font-weight: 600;
     padding: .5rem 1rem;
     border-radius: 4px;
     width: 90%;
-    color: var(--primaryColor-light);
+    color: var(--textColor-lightdark);
 }
 
 .sidebar .signUp{
@@ -155,27 +157,19 @@
     color: var(--primaryColor-light);
 }
 
-.sidebar a:focus {
+.sidebar a:focus{
+    color: var(--primaryColor-light);
     background: var(--brand-primary);
 }
 
 
-/* Apply this class when the sidebar is open */
 body.sidebar-open .sidebar {
     transform: translateX(0);
+    position: fixed;
 }
 
 body.sidebar-open {
     overflow: hidden;
-}
-
-body.sidebar-open .sidebar {
-    position: fixed;
-}
-
-body.sidebar-open .hero,
-.teams-section {
-    position: sticky;
 }
 
 /* --------------------------------------------------------- */
@@ -398,7 +392,7 @@ body.sidebar-open .hero,
     filter: drop-shadow(0px 0px 56px rgba(100, 118, 139, 0.15));
     overflow: hidden;
     animation: slideDn 1s ease forwards;
-    transition: all ease .4s;
+    transition: all ease 1s;
 }
 
 .card:hover {
@@ -543,7 +537,7 @@ body.sidebar-open .hero,
 #ratingDisplay {
     color: var(--brand-secondary);
     width: fit-content;
-    display: block;
+    display: inline;
     font-size: .8rem;
     font-weight: 500;
     margin-left: .8rem;
@@ -599,7 +593,13 @@ body.sidebar-open .hero,
 .socialProofs .container .titleContainer {
     width: 100%;
     margin: 1rem 0;
-    color: var(--primaryColor-dark);
+}
+
+
+.titleContainer h2{
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--textColor-dark);
 }
 
 .socialProofs .container > p {
@@ -620,7 +620,7 @@ body.sidebar-open .hero,
 .socialProofs .container .clients-icons {
     padding: 1rem;
     border-radius: .5rem;
-    background: var(--brand-lightBlue);
+    background: var(--tertiaryColor-dark);
     display: flex;
     justify-content: center;
     margin: var(--auto-margin-l-r);

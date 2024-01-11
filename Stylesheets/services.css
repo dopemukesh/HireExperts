@@ -38,8 +38,7 @@
 .hero-wrapper {
     margin: var(--auto-margin-l-r);
     max-width: var(--full-size);
-    height: 720px;
-    /* background: red; */
+    height: 356px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -50,8 +49,6 @@
 
 
 .hero-left-side{
-    /* width: 30%; */
-    height: 50%;
     background: var(--brand-primary);
     display: flex;
     justify-content: center;
@@ -61,13 +58,11 @@
 }
 
 .hero-left-side h1{
-    font-size: 3rem;
+    font-size: 3vmax;
 }
 
 
 .hero-center{
-    /* width: 40%; */
-    height: 50%;
     color: var(--primaryColor-dark);
     background: var(--tertiaryColor-dark);
     overflow: hidden;
@@ -76,11 +71,13 @@
     align-items: center;
     flex: 1;
     align-self: stretch;
-    position: relative;
+    position: sticky;
+    top: 54px;
+    z-index: 2;
 }
 
 .hero-center h1{
-    font-size: 8rem;
+    font-size: 7vmax;
     animation: bounce 1s ease-in alternate infinite;
 }
 
@@ -94,8 +91,6 @@
     animation: bounceball .51s ease-in alternate infinite;
 }
 .hero-right-side{
-    /* width: 30%; */
-    height: 50%;
     background: var(--brand-secondary);
     overflow: hidden;
     display: flex;
@@ -106,7 +101,7 @@
 }
 
 .hero-right-side h1{
-    font-size: 3rem;
+    font-size: 3vmax;
 }
 
 @media only screen and (max-width: 425px) {
