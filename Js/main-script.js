@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     var spanElement = document.querySelector('#heading span');
-    var inputValue = document.getElementById('searchBox').value;
+    var inputValue = document.getElementById('search').value;
 
     var spanText = spanElement.textContent;
     var initialValue = inputValue;
 
     spanElement.textContent = '';
-    document.getElementById('searchBox').value = '';
+    document.getElementById('search').value = '';
 
     var spanIndex = 0;
     var spanSpeed = 200;
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var inputSpeed = 150;
 
     function typeInput() {
-        var inputBox = document.getElementById('searchBox');
+        var inputBox = document.getElementById('search');
         if (inputIndex < initialValue.length) {
             inputBox.value += initialValue.charAt(inputIndex);
             inputIndex++;
@@ -99,5 +99,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+
+
+
+    function toggleContent(element) {
+        element.parentNode.classList.toggle('active');
+    }
 
 });

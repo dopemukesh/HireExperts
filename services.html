@@ -21,21 +21,27 @@
 
     <div id="head_content"></div>
 
-    <div id="content_wrapper">
-        <div class="hero-wrapper">
-            <div class="hero-left-side">
-                <h1>This page is</h1>
+    <div id="content-wrapper">
+        <div class="content-container-wrapper">
+            <aside class="left-container">
+                <div class="left-head-content">
+                    <h1>Services</h1>
+                </div>
+                <div class="left-contents">
+                    <h3 onclick="toggleContent(this)">Web Development</h3>
+                    <ul>
+                        <li class="item item1" onclick="handleClick(this)"><a href="#" tabindex="4">Front-End Development&nbsp; </a></li>
+                        <li class="item item2" onclick="handleClick(this)"><a href="#"  tabindex="0">Back-End Development&nbsp;  </a></li>
+                        <li class="item item3" onclick="handleClick(this)"><a href="#" tabindex="0">Full-Stack Development&nbsp;  </a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="center-container">
+                <h1> All Items can be here </h1>
             </div>
-
-            <div class="hero-center">
-                <h1>Under</h1>
-                <i class="ball"></i>
+            <div class="right-container">
+                <h1> All Items preview can be here </h1>
             </div>
-
-            <div class="hero-right-side">
-                <h1>Construction.</h1>
-            </div>
-
         </div>
     </div>
 
@@ -45,6 +51,24 @@
 <script>
     $('#head_content').load('header.html');
     $('#footer_content').load('footer.html');
+</script>
+
+<script>
+    function toggleContent(element) {
+        element.parentNode.classList.toggle('active');
+    }
+</script>
+
+<script>
+    function handleClick(element) {
+        // Remove the 'active' class from all list items
+        document.querySelectorAll('.left-contents ul li').forEach(function (li) {
+            li.classList.remove('active');
+        });
+
+        // Add the 'active' class to the clicked list item
+        element.classList.add('active');
+    }
 </script>
 
 </html>

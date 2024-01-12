@@ -30,14 +30,16 @@
     --brand-primarylight: #C6B0FF;
     --brand-secondary: #08BD80;
     --brand-offline: #dc143c;
-    --brand-offlineLight: #FFE2E8;
+    --brand-offlineLight: #ffd9e0;
     --brand-lightBlue: #F1F7FF;
+    --brand-lightBlue: #F8FAFC;
     --brand-lightGreen: #ECFFF7;
 
     --brand-purpleGrad: linear-gradient(45deg, #1d0038 0%, #9f39ff 100%);
     --brand-greenGrad: linear-gradient(45deg, #005454 0%, #00FFD1 100%);
 
     --full-size: 1440px;
+    --full-size: 1920px;
     --tab-size: 768px;
 
     --auto-margin-t-b: auto 0;
