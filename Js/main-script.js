@@ -106,4 +106,19 @@ document.addEventListener('DOMContentLoaded', function () {
         element.parentNode.classList.toggle('active');
     }
 
+
+
+    const scraperUserAgents = ['commonScraper1', 'commonScraper2'];
+
+    const isScraper = () => {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return scraperUserAgents.some(scraper => userAgent.includes(scraper));
+    };
+
+    if (isScraper()) {
+        window.location.href = 'https://example.com/blocked'; // Redirect to a blocking page
+    }
+
+
+
 });
