@@ -1,4 +1,12 @@
-<div class="header">
+
+<head>
+    <link rel="stylesheet" href="Stylesheets/root.css">
+    <link rel="stylesheet" href="Stylesheets/styles.css" type="text/css">
+    <link rel="stylesheet" href="Stylesheets/animation.css" type="text/css">
+</head>
+
+
+<div class="header" id="header">
     <div class="nav">
         <div class="logobox">
             <a href="index.html"><img src="Images/HireExperts-logo02.svg" alt="logo"></a>
@@ -41,6 +49,23 @@
 
 <!-- <script src="header.js"></script> -->
 <script>
+
+    // Code for sticky header 
+    const header = document.querySelector("#header");
+
+    const sticky = header.offsetTop;
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > sticky) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+
+
+
+
     var menuIcon = document.querySelector('#menuIcon');
     var closeIcon = document.querySelector('#closeIcon');
     var body = document.body;

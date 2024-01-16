@@ -1,11 +1,12 @@
 
 .header{
-    position: fixed;
+    position: sticky;
     background: white;
+    top: 0;
+    z-index: 50;
 }
 
 #content_wrapper{
-    top: 4rem;
     max-width: var(--full-size);
     height: 100%;
     display: flex;
@@ -56,6 +57,6 @@ aside{
 
 @media only screen and (max-width: 425px) {
     #content_wrapper{
-        top: 3rem;
+        /* top: 3rem; */
     }
 }

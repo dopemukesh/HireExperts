@@ -1,39 +1,57 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var spanElement = document.querySelector('#heading span');
-    var inputValue = document.getElementById('search').value;
 
-    var spanText = spanElement.textContent;
-    var initialValue = inputValue;
+    // Code for sticky header 
+    const header = document.querySelector("#header");
 
-    spanElement.textContent = '';
-    document.getElementById('search').value = '';
-
-    var spanIndex = 0;
-    var spanSpeed = 200;
-
-    function typeSpan() {
-        if (spanIndex < spanText.length) {
-            spanElement.textContent += spanText.charAt(spanIndex);
-            spanIndex++;
-            setTimeout(typeSpan, spanSpeed);
+    const sticky = header.offsetTop;
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
         } else {
-            typeInput();
+          header.classList.remove('sticky');
         }
-    }
+    });
 
-    var inputIndex = 0;
-    var inputSpeed = 150;
 
-    function typeInput() {
-        var inputBox = document.getElementById('search');
-        if (inputIndex < initialValue.length) {
-            inputBox.value += initialValue.charAt(inputIndex);
-            inputIndex++;
-            setTimeout(typeInput, inputSpeed);
-        }
-    }
 
-    typeSpan();
+
+    
+    // var spanElement = document.querySelector('#heading span');
+    // var inputValue = document.getElementById('search').value;
+
+    // var spanText = spanElement.textContent;
+    // var initialValue = inputValue;
+
+    // spanElement.textContent = '';
+    // document.getElementById('search').value = '';
+
+    // var spanIndex = 0;
+    // var spanSpeed = 200;
+
+    // function typeSpan() {
+    //     if (spanIndex < spanText.length) {
+    //         spanElement.textContent += spanText.charAt(spanIndex);
+    //         spanIndex++;
+    //         setTimeout(typeSpan, spanSpeed);
+    //     } else {
+    //         typeInput();
+    //     }
+    // }
+
+    // var inputIndex = 0;
+    // var inputSpeed = 150;
+
+    // function typeInput() {
+    //     var inputBox = document.getElementById('search');
+    //     if (inputIndex < initialValue.length) {
+    //         inputBox.value += initialValue.charAt(inputIndex);
+    //         inputIndex++;
+    //         setTimeout(typeInput, inputSpeed);
+    //     }
+    // }
+
+    // typeSpan();
 
     var menuIcon = document.getElementById('menuIcon');
     var closeIcon = document.getElementById('closeIcon');
