@@ -24,9 +24,10 @@
 }
 
 .logobox {
+    z-index: 3000;
     margin: var(--auto-margin-t-b);
     display: flex;
-    width: 161px;
+    width: 124px;
     animation: slideleft 2s ease;
 }
 
@@ -45,13 +46,13 @@
 
 
 .nav-links a.default {
-    color: var(--brand-primary);
+    /* color: var(--brand-primary); */
     border-bottom: 2px solid var(--brand-primary);
 }
 
 
 .nav-links a:active {
-    color: var(--brand-primary);
+    /* color: var(--brand-primary); */
 }
 
 .nav-links a {
@@ -98,7 +99,7 @@
 .action-btn .signUp {
     color: var(--primaryColor-light);
     background: var(--brand-primary);
-    padding: 4px 16px;
+    padding: 4px 24px;
     border-radius: .4rem;
 }
 
@@ -136,16 +137,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 64px;
+    right: -82px;
+    bottom: 5px;
+    z-index: 4000;
 }
 
+.sidebar a svg {
+    margin: 0 .8rem;
+}
 
 .sidebar a {
     font-weight: 600;
-    padding: .5rem 1rem;
+    padding: .5rem 0;
     border-radius: 4px;
     width: 90%;
     color: var(--textColor-lightdark);
+    display: flex;
+    align-items: center;
 }
 
 .sidebar .signUp {
@@ -155,6 +163,10 @@
 .sidebar a:hover {
     background: var(--secondaryColor-dark);
     color: var(--primaryColor-light);
+}
+
+.sidebar a:hover svg path {
+    fill: var(--primaryColor-light);
 }
 
 
@@ -181,7 +193,8 @@ body.sidebar-open {
 .hero {
     width: 100%;
     height: auto;
-    background: linear-gradient(45deg, #081016, #294861);
+    /* background: linear-gradient(45deg, #081016, #112536); */
+    background: var(--primaryColor-light);
 }
 
 .hero-contents {
@@ -191,7 +204,7 @@ body.sidebar-open {
     margin: var(--auto-margin-l-r);
     max-width: var(--full-size);
     height: 568px;
-    color: var(--primaryColor-light);
+    color: var(--textColor-dark);
     align-items: center;
 }
 
@@ -211,10 +224,15 @@ body.sidebar-open {
 
 #hero-heading h1 span {
     color: var(--brand-primary);
+    /* filter: drop-shadow(0 0 20px #7054ff); */
+}
+
+#hero-heading h1 span::selection {
+    color: #fff;
+    background: var(--brand-secondary);
 }
 
 .hero-tagline>p {
-    /* margin: 1rem 0; */
     width: 100%;
     color: var(--textColor-lightdark);
 }
@@ -227,7 +245,7 @@ body.sidebar-open {
     border-radius: 0.4rem;
     overflow: hidden;
     align-items: center;
-    background: #3a515f3d;
+    background: var(--textColor-dark);
     backdrop-filter: blur(5px);
 }
 
@@ -364,7 +382,6 @@ body.sidebar-open {
 
 .hero-right>img:hover+.userInfo {
     opacity: 1;
-    /* display: flex; */
 }
 
 /* <!-- hero section ends --> */
@@ -379,6 +396,19 @@ body.sidebar-open {
     height: auto;
 }
 
+.teams-heading {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background: #fff;
+}
+
+
+.teams-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--textColor-dark);
+}
 .teams-member {
     max-width: var(--full-size);
     margin: var(--auto-margin-l-r);
@@ -395,15 +425,16 @@ body.sidebar-open {
 
 .card {
     z-index: 3;
-    min-width: 19rem;
+    min-width: 18rem;
     height: 22rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     border-radius: 1rem;
     background: var(--primaryColor-light);
     color: var(--textColor-dark);
-    filter: drop-shadow(0px 0px 56px rgba(100, 118, 139, 0.15));
+    filter: drop-shadow(0px 0px 56px rgba(78, 116, 160, 0.15));
     overflow: hidden;
     animation: slideDn 1s ease forwards;
     transition: all ease 1s;
@@ -416,54 +447,44 @@ body.sidebar-open {
 
 .card .img-card {
     width: 100%;
-    aspect-ratio: 16/9;
-    color: var(--primaryColor-light);
+    height: 50%;
     display: flex;
-    background: var(--brand-purpleGrad);
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.img-card .img-chip {
-    z-index: 1;
+.card .img-card .img-wrapper{
+    width: 144px;
+    height: 144px;
+    border: 18px solid #f1f2ff;
+    border-radius: 50%;
     display: flex;
-    margin: 8px;
-}
-
-.img-card .img-chip a {
-    color: var(--primaryColor-light);
-    background: rgba(255, 255, 255, 0.219);
-    height: fit-content;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 12px;
 }
 
 .card .img-card img {
-    width: 100%;
-    height: auto;
-    transition: transform 1s ease;
-    position: absolute;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #c5cbf8;
 }
 
-.card .texts,
-.card .card-action-btn {
-    margin: .8rem;
-    justify-content: space-between;
-    animation: slideleft 1.3s ease forwards;
+.card .texts{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--textColor-dark);
 }
-
-
 
 .card .card-action-btn {
     display: flex;
-    margin: .8rem;
-    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    padding: .8rem;
+    align-items: center;
+    justify-content: center;
     animation: slideleft 1.3s ease forwards;
 }
 
-.card .texts .name-chip h3 {
-    color: var(--textColor-dark);
-}
 
 .card .texts p {
     color: var(--textColor-lightdark);
@@ -471,18 +492,18 @@ body.sidebar-open {
     font-weight: 500;
 }
 
-.card .texts .name-chip {
+.card .profession-chip {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.card .text-chip a {
+.card .profession-chip a {
     font-size: 8px;
     font-weight: 600;
     border-radius: 2px;
-    background: var(--tertiaryColor-dark);
+    background: #f1f2ff;
     padding: 4px;
     display: flex;
     flex-direction: column;
@@ -498,90 +519,26 @@ body.sidebar-open {
     animation: slideleft 1.6s ease forwards;
 }
 
-/* Add this CSS to style the modal */
-.modal {
-    z-index: 300;
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+.chat-btn {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
-
-.modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: .5rem;
-    text-align: center;
-
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.ratings-options {
-    margin-top: 20px;
-}
-
-.star {
-    font-size: 34px;
-    cursor: pointer;
-}
-
-
-.star.rated {
-    color: #ffee00;
-    filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
-}
-
-
-#submitRating {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: var(--brand-secondary);
-    color: #fff;
-    border: none;
-    border-radius: .3rem;
-    cursor: pointer;
-}
-
-
-#ratingDisplay {
-    color: var(--brand-secondary);
-    width: fit-content;
-    display: inline;
-    font-size: .8rem;
-    font-weight: 500;
-    margin-left: .8rem;
-}
-
 
 .chat-btn a {
     color: var(--primaryColor-light);
     background: var(--brand-primary);
     display: flex;
-    column-gap: .5rem;
+    column-gap: 1rem;
     align-items: center;
     height: 2rem;
-    width: 6rem;
+    width: 100%;
     justify-content: center;
     border-radius: .4rem;
     animation: slideleft 1.5s ease forwards;
+    font-weight: 500;
 }
 
 .chat-btn a:hover {
-    background: #8167ff;
+    background: #543bd1;
 }
 
 .chat-btn a i {
@@ -598,7 +555,7 @@ body.sidebar-open {
     width: 100%;
     height: auto;
     display: flex;
-    /* background: red; */
+    background: var(--primaryColor-light);
 }
 
 
@@ -643,7 +600,7 @@ body.sidebar-open {
 .socialProofs .container .clients-icons {
     padding: 1rem;
     border-radius: .5rem;
-    background: var(--tertiaryColor-dark);
+    /* background: var(--tertiaryColor-dark); */
     display: flex;
     justify-content: center;
     margin: var(--auto-margin-l-r);
@@ -669,6 +626,7 @@ body.sidebar-open {
     flex-direction: column;
     color: white;
     background-position: bottom;
+    z-index: 9;
 }
 
 .footer .footer-contents {
@@ -729,19 +687,20 @@ body.sidebar-open {
     align-items: center;
     padding: 3rem 0;
     color: var(--textColor-dark);
-    background: var(--tertiaryColor-dark);
+    background: var(--brand-primary);
 }
 
 .newsLetter-container {
     max-width: var(--full-size);
     height: 300px;
-    background: var(--tertiaryColor-dark);
+    background: var(--primaryColor-light);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
     border-radius: 1rem;
     overflow: hidden;
+    margin: 0 1rem;
 }
 
 .img-container {
